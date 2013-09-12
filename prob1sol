@@ -1,0 +1,2 @@
+perl -e '$c=<>;while(<>){chomp;@a=split/ /;die "bad input $_; @a" if$a[0]!=$#a;shift@a;$sum=0;$sum+=$_ for@a;$min=$sum;solve($sum/2-$a[0],@a/2-1,@a[1..$#a]);print"Case #".++$case.": ".($min*2)."\n"}sub solve{my($s,$r,@c)=@_;if($r==0){if(abs($s)<$min){$min=abs($s)}}else{for(0..$#c){solve($s-$c[$_],$r-1,@c[0..$_-1,$_+1..$#c])}}}' prob1a > prob1aout
+

@@ -1,0 +1,13 @@
+import math
+
+
+totalcases = int(line[0])
+	line.pop(0)
+	for i in range(0,totalcases*2+1):
+		line[i] = line[i][:-1]
+def nCr(n,r):
+    f = math.factorial
+    return f(n) / f(r) / f(n-r)
+
+if __name__ == '__main__':
+    print nCr(4,2)
